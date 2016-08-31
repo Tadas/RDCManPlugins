@@ -10,38 +10,38 @@ namespace Plugin.Sample
     {
         public void OnContextMenu(System.Windows.Forms.ContextMenuStrip contextMenuStrip, RdcTreeNode node)
         {
-            MessageBox.Show("OnContextMenu");
+            MessageBox.Show("OnContextMenu", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void OnDockServer(ServerBase server)
         {
-            MessageBox.Show("OnDockServer");
+            MessageBox.Show("OnDockServer", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void OnUndockServer(IUndockedServerForm form)
         {
-            MessageBox.Show("OnUndockServer");
+            MessageBox.Show("OnUndockServer", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void PostLoad(IPluginContext context)
         {
-            MessageBox.Show("PostLoad");
+            MessageBox.Show("PostLoad", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void PreLoad(IPluginContext context, XmlNode xmlNode)
         {
-            MessageBox.Show("PreLoad");
+            MessageBox.Show("PreLoad", "Plugin.Sample event", MessageBoxButtons.OK ,MessageBoxIcon.Information);
         }
 
         public XmlNode SaveSettings()
         {
-            MessageBox.Show("SaveSettings. I don't think this is called from anywhere");
+            MessageBox.Show("SaveSettings", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return null;
         }
 
         public void Shutdown()
         {
-            MessageBox.Show("Shutdown");
+            MessageBox.Show("Shutdown", "Plugin.Sample event", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

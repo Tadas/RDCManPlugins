@@ -4,7 +4,7 @@ Remote Desktop Connection Manager 2.7 (maybe earlier?) contains undocumented sup
 
 Plugins are C# dlls (.NET 4.0?) which export a class implementing IPlugin interface. Add `C:\Program Files (x86)\Microsoft\Remote Desktop Connection Manager\RDCMan.exe` to your project references.
 
-## Plugin loading ##
+## Loading ##
 
 For a plugin to be loaded the dll must be placed in the same folder as `RDCMan.exe` and it must be called `Plugin.*.dll`. For more info see `RdcMan.Program.InstantiatePlugins()` inside of `RDCMan.exe`
 
@@ -19,5 +19,8 @@ Plugins implement the `IPlugin` interface which has these callbacks:
 - SaveSettings - user clicked OK in the Options dialog
 - Shutdown - RDCMan is shutting down
 
+## Plugin.Sample ##
+A plugin skeleton. Place the compiled dll in the same folder as RDCMan.exe
 
-See Plugin.Sample for a working example. Place the compiled dll in the same folder as RDCMan.exe
+## Plugin.EnterPSSession ##
+![Screenshot](./Images/Plugin.EnterPSSession.jpg)
